@@ -1,0 +1,2 @@
+# Movie_Review_Website
+实训web项目，使用SSH框架的一个类豆瓣影评网站
