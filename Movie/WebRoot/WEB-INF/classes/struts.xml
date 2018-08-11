@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="hmm" namespace="/" extends="struts-default">
+		<action name="login" class="com.hmm.Action.LoginAction" method="login">
+			<result name="success">/view/main.jsp</result>
+			<result name="fail">/view/login.jsp</result>
+		</action>
+		
+		<action name="regist" class="com.hmm.Action.RegistAction" method="regist">
+			<result name="success">/view/main.jsp</result>
+			<result name="fail">/view/register.jsp</result>
+		</action>
+		
+		<action name="movie" class="" method="">
+			<result name="success" type=""></result>
+		</action>
+	</package>
+</struts>    

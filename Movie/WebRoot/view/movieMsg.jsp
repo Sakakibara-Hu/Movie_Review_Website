@@ -279,7 +279,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			  				for(int i=0; i<n; i++)
 				  			{
 				  				out.print("<div class='m_item'>");
-				  				out.print("<img class='Poster' alt='loading...' src='view/static/image/background.png'>");
+				  				out.print("<img class='Poster' alt='loading...' onerror=\"this.src='view/static/image/background.png;this.onerror=null'\" src='"+tjm.get(i).getMovieImage()+"'>");
 				  				out.print("<a href='view/movieMsg.jsp?mid="+tjm.get(i).getMovieId()+"'>");
 				  				out.print("<p title='"+tjm.get(i).getMoviename()+"' class='movieName'>"+tjm.get(i).getMoviename()+"</p>");
 				  				out.print("</a>");

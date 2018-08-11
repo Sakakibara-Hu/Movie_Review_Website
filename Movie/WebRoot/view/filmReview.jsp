@@ -94,6 +94,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
   <jsp:include page="header.jsp"></jsp:include>
+  <div id="page_Flag" style="display: none;">review</div>
+  
   <div class="mainFR">
       <div class="upFR">
       	<h1 style="margin-bottom: 20px;">  ${commentByCommentId.getCommentMovieName()}</h1>

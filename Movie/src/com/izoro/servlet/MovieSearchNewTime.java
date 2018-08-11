@@ -22,6 +22,7 @@ public class MovieSearchNewTime extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		MovieDaoImpl movieDaoImpl=new MovieDaoImpl();
 		request.setCharacterEncoding("utf-8");
+		response.setCharacterEncoding("utf-8");
 		String pages=request.getParameter("page");
 		int page=Integer.parseInt(pages);
 		List<Movie> moive=movieDaoImpl.SearchMovieNewTime(page);

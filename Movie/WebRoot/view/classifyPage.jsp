@@ -167,6 +167,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   
   <body>
   <jsp:include page="header.jsp"></jsp:include>
+  <div id="page_Flag" style="display: none;">classify</div>
+  
   <div style="height:5px;background-color: rgb(220,226,228);"></div>
   <div class="main">
   	<div class="left">

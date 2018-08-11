@@ -97,6 +97,8 @@ opacity: 0.5;
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
+	<div id="page_Flag" style="display: none;">regist</div>
+	
 	<%
 		if(request.getAttribute("result") != null){
 			if(request.getAttribute("result").equals(false)){
@@ -109,10 +111,10 @@ opacity: 0.5;
 	<div id="wrapper">
 		<div id="content">
 			<h1 style="padding-top: 25px;">Please Enter</h1><br><br>
-			<form action="<%=request.getContextPath()%>/UserregistServlet" onsubmit="return check()" method="post">
-				<div class="inputLine"><span>用户名 :</span> <input type="text" id="name" class="inputText" maxlength="18" name="username"></div><br>
-				<div class="inputLine"><span>密 &nbsp;&nbsp;码 :</span> <input type="password" id="pwd" maxlength="18" class="inputText" name="password"></div><br>
-				<div class="inputLine"><span>邮 &nbsp;&nbsp;箱 :</span> <input type="email" id="email" maxlength="30" class="inputText" name="email"></div><br>
+			<form action="regist" onsubmit="return check()" method="post">
+				<div class="inputLine"><span>用户名 :</span> <input type="text" id="name" class="inputText" maxlength="18" name="u.userName"></div><br>
+				<div class="inputLine"><span>密 &nbsp;&nbsp;码 :</span> <input type="password" id="pwd" maxlength="18" class="inputText" name="u.userPassword"></div><br>
+				<div class="inputLine"><span>邮 &nbsp;&nbsp;箱 :</span> <input type="email" id="email" maxlength="30" class="inputText" name="u.eMail"></div><br>
 				<div class="buttonL">
 				<input type="submit" id="regist" value="完 成 注 册" class="inbutton"></div>
 			</form>

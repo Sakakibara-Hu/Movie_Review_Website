@@ -88,25 +88,36 @@ li.active {
 </style>
 <script type="text/javascript">
 	window.onload = function(){
-		var aNode = document.getElementById("navi").getElementsByTagName("a");
+		
 		var lNode = document.getElementById("navi").getElementsByTagName("li");
-		var currenturl = document.location.href;
-		for(var i=0; i<aNode.length; i++){
-			var aurl = aNode[i].getAttribute("href");
-			if(currenturl.indexOf(aurl) == -1){
-				lNode[i].setAttribute("class", "");
+		var flag = document.getElementById("page_Flag");
+		
+		
+		if(flag != null){
+			var text = flag.textContent;
+			if(text=="regist" || text=="login"){
+				var search = document.getElementById("searchB");
+				search.style.display = "none";
 			}
 			else{
-				lNode[i].setAttribute("class", "active");
+				var i = 0;
+				switch(text){
+					case "main": i = 0; break;
+					case "rank": i = 1; break;
+					case "classify": i = 2; break;
+					case "review": i = 3; break;
+					default : i = 0; break;
+				}
+				for(var j=0; j<lNode.length; j++){
+					if(i==j){
+						lNode[j].setAttribute("class", "active");
+					}
+					else{
+						lNode[j].setAttribute("class", "");
+					}
+				}
 			}
 		}
-		
-		if(currenturl.indexOf("regist") != -1 || currenturl.indexOf("ogin") != -1){
-			var search = document.getElementById("searchB");
-			search.style.display = "none";
-		}
-		
-		
 	}
 </script>
 </head>
@@ -148,7 +159,7 @@ li.active {
 			<li><a href="view/main.jsp" >首页</a></li>
 			<li><a href="view/rankList.jsp" >排行榜</a></li>
 			<li><a href="view/classifyPage.jsp" >分类</a></li>
-			<li><a href="view/yingping.jsp" >影评</a></li>
+			<li><a href="view/filmReview.jsp" >影评</a></li>
 		</ul>
 		
 		

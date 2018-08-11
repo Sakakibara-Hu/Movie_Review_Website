@@ -145,6 +145,8 @@ function loginF(){
 </head>
 <body>
 	<jsp:include page="header.jsp"></jsp:include>
+	<div id="page_Flag" style="display: none;">login</div>
+	
 	<div>
 		<div class="main">
 			<div id="content" class="login">
@@ -157,15 +159,15 @@ function loginF(){
 				  <%}
 				 %>
 				<h1>WELCOME</h1>
-				<form action="Login" onsubmit="return loginF()" method="post">
+				<form action="login" onsubmit="return loginF()" method="post">
 					<div class="inputA">
 						<span>用户名 :</span> <input type="text" class="inputText" maxlength="18" 
-							name="username" id="name">
+							name="u.userName" id="name">
 					</div>
 					<br />
 					<div class="inputB">
 						<span>密 &nbsp;&nbsp;码 :</span> <input type="password" maxlength="18" 
-							class="inputText" name="password" id="psword">
+							class="inputText" name="u.userPassword" id="psword">
 					</div>
 					<br />
 					<div class="buttonD">

@@ -141,6 +141,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	</jsp:forward>
 	<%} %>
 	<jsp:include page="header.jsp"></jsp:include>
+	<div id="page_Flag" style="display: none;">main</div>
 	
 	<div id="slide" class="carousel slide" style="width: 100%; margin-bottom: 40px; ">
 	
